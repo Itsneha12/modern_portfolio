@@ -1,0 +1,16 @@
+{
+  "name": "week2-task",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "license": "MIT",
+  "author": "Neha",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/ -o Task2/css/ --recursive"
+  },
+  "dependencies": {
+    "sass": "^1.100.0"
+  },
+  "devDependencies": {}
+}
