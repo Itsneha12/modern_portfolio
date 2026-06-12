@@ -284,6 +284,41 @@ main#about {
   line-height: 1.7;
 }
 
+.contact-cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+.contact-cards .contact-card {
+  width: 320px;
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.contact-cards .contact-card i {
+  font-size: 2.5rem;
+  color: #eece1a;
+  margin-bottom: 1rem;
+}
+.contact-cards .contact-card h3 {
+  margin-bottom: 1rem;
+  color: #eece1a;
+}
+.contact-cards .contact-card p {
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+.contact-cards .contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
