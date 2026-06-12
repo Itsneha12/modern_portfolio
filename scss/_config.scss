@@ -1,3 +1,4 @@
+@use "sass:color";
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
@@ -15,30 +16,39 @@ $background-opacity:0.9;
         background-size:cover;
         &:after{
             content:"";
-            position: absolute;
+            position:fixed;
             top:0;
             right:0;
             width:100%;
+            // min-height:100vh;
             height:100%;
             z-index:-1;
-            background : rgba($primary-color , $background-opacity);
+            background : rgba(68,68,68,0.92);
         }
     }
  }
 }
+// Set Text Color function
+@function set-text-color($color){
+ @if (color.channel($color,"lightness", $space:hsl) >40 ){
+    @return #000;
+ }@else{
+    @return #fff;
+ }
+}
 // Media Query Mixins
 @mixin mediaSm{
-    @media screen and(max-width:500px){
+    @media screen and (max-width:500px){
         @content;
     }
 }
 @mixin mediaMd{
-    @media screen and(max-width:768px){
+    @media screen and (max-width:768px){
         @content;
     }
 }
-@mixin mediLg{
-    @media screen and (min-width:769px) and(max-width:1170px){
+@mixin mediaLg{
+    @media screen and (min-width:769px) and (max-width:1170px){
         @content;
     }
 }

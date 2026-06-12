@@ -1,4 +1,5 @@
 // Menu Button
+@use "sass:color";
 @mixin easeOut{
     transition: all 0.5s ease-out;
 }
@@ -17,7 +18,7 @@ $show-home-image: true;
         width:28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background:set-text-color($primary-color);
         @include easeOut;
     }
     &.close{
@@ -64,7 +65,7 @@ $show-home-image: true;
     &-nav{
         margin:0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: lighten($primary-color,5%);
         list-style: none;
         transform: translate3d(0,100%,0);
         @include easeOut;
@@ -102,13 +103,13 @@ $show-home-image: true;
         }
     }
     .nav-link{
-        display:inline-box;
+        display:inline-block;
         position: relative;
         font-size: 30px;
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color:#fff;
+        color:set-text-color($primary-color);
         text-decoration:none;
         @include easeOut;
         &:hover{
