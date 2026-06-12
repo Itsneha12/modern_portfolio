@@ -49,7 +49,11 @@
     "project3";
     grid-template-columns:1fr;
   }
+  .projects{
+    grid-template-columns: 1fr;
 }
+}
+
 // Smartphones
 @include mediaSm{
    main#home h1{
