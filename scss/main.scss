@@ -1,0 +1,205 @@
+@import 'config';
+@import 'menu';
+*{
+    box-sizing:border-box;
+}
+body{
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height:100%;
+    margin:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height:1.5;
+}
+// Headings
+h1,h2,h3{
+    margin:0;
+    font-weight:400;
+
+    &.lg-heading {
+    font-size: 4rem;
+    }
+    &.sm-heading {
+        margin-bottom: 2rem;
+         padding: 0.2rem 1rem;
+
+    }
+}
+a{
+    color: #fff;
+    text-decoration:none;
+}
+
+header{
+    position: fixed;
+    z-index:2 ;
+    width: 100% ;
+}
+.text-secondary{
+  color:$secondary-color;
+}
+main{
+    padding:4rem ;
+    min-height: 100vh;
+
+    .icons{
+        margin-top:1rem;
+
+        a{
+            padding:0.4rem;
+            
+            &:hover{
+                color: $secondary-color;
+                @include easeOut(); 
+
+            }
+        }
+    }
+&#home{
+    overflow:hidden;
+    h1{
+        margin-top: 20vh;
+
+    }
+}
+}
+main#about{
+    padding:100px;
+}
+.about-info{
+    display:grid;
+    grid-template-areas:
+    "bioimage bio bio"
+    "project1 project2 project3";
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    align-items:stretch;
+    margin-top:2rem;
+    .bio-image {
+    grid-area:bioimage ;
+    margin:auto;
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border: 4px solid $secondary-color;
+    }
+    .bio{
+    grid-area: bio;
+    background: rgba(255,255,255,0.08);
+    padding:2rem;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    h3{
+        margin-bottom:1rem;
+    }
+    p{
+        line-height:1.8;
+        font-size:1.1rem;
+    }
+}
+.project-1{
+  grid-area: project1;
+}
+.project-2{
+  grid-area: project2;
+}
+.project-3{
+  grid-area: project3;
+}
+.project{
+   background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    border-bottom: 4px solid $secondary-color;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    h3{
+        color:$secondary-color;
+        margin-bottom:10px;
+    }
+    &:hover{
+        transform:translateY(-8px);
+    }
+}
+}
+//  Work Page
+#work {
+    padding-top: 100px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid $secondary-color;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: $secondary-color;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+// Conatct Page
+.contact-cards{
+    display:flex;
+    justify-content: space-evenly;
+    gap:25px;
+    margin-top: 3rem;
+    flex-wrap:wrap;
+
+    .contact-card{
+        width:320px;
+        min-height:220px;
+        background:rgba(255,255,255,0.08);
+        border-radius:15px;
+        padding:2rem;
+        text-align:center;
+        border:1px solid rgba(255,255,255,0.2);
+        transition:all 0.3s ease;
+    i{
+        font-size:2.5rem;
+        color:$secondary-color;
+        margin-bottom:1rem;
+    }
+    h3{
+        margin-bottom:1rem;
+        color:$secondary-color;
+    }
+    p{
+        font-size:1.1rem;
+        word-wrap:break-word;
+    }
+        &:hover{
+            transform:translateY(-10px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.4);
+        }
+    }
+}
+// Footer 
+#main-footer{
+    text-align:center;
+    padding:1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height:60px;
+}
+
+@import 'mobile';
